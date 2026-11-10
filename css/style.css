@@ -1,0 +1,257 @@
+/* ===== 1. COLOURS AND FONTS (change colours here only) ===== */
+:root{--bg:#f2f4f7;--surface:#fff;--ink:#0b1220;--muted:#5c6577;--accent:#3654ff;--accent2:#3654ff;--line:#dde1ea;--on:#fff;--glow:rgba(54,84,255,.28);--glass:rgba(255,255,255,.6)}
+[data-bs-theme=dark]{--bg:#0a0a0c;--surface:#131316;--ink:#f5f4f0;--muted:#9a9a9f;--accent:#d4ff3f;--accent2:#d4ff3f;--line:#232327;--on:#0a0a0c;--glow:rgba(212,255,63,.22);--glass:rgba(255,255,255,.045)}
+html{scroll-behavior:smooth}
+:root,[data-bs-theme=dark]{transition:background-color .5s}
+body{transition:background-color .5s,color .5s}
+body{font-family:'Space Grotesk',sans-serif;font-size:1rem;background:var(--bg);color:var(--ink);line-height:1.75;letter-spacing:-.01em}
+h1,h2,h3,.navbar-brand{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:0}
+em,.role em{font-family:'Instrument Serif',serif;font-style:italic}
+a{color:var(--accent)}
+
+/* ===== 2. PRELOADER AND PROGRESS BAR ===== */
+#preloader{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:2000;transition:opacity .4s}
+#preloader.hide{opacity:0;pointer-events:none}
+#preloader .spinner-border{color:var(--accent)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent2);z-index:1500}
+
+/* ===== 3. NAVBAR ===== */
+.navbar{background:var(--surface);transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.35)}
+.navbar-brand{font-size:1.7rem;font-weight:700;color:var(--ink)}
+.dot{color:var(--accent2)}
+.nav-link{color:var(--muted);font-weight:500}
+.nav-link.active,.nav-link:hover{color:var(--accent)}
+
+/* ===== 4. BUTTONS ===== */
+.btn-brand{background:var(--accent);color:var(--on);border:1px solid var(--accent);padding:.65rem 1.6rem;border-radius:2px;font-weight:600}
+.btn-brand:hover{background:transparent;color:var(--accent)}
+.btn-outline-brand{border:1px solid var(--accent);color:var(--ink);padding:.65rem 1.6rem;border-radius:2px;font-weight:600}
+.btn-outline-brand:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== 5. HERO ===== */
+.hero{padding:9rem 0 5rem;min-height:100vh;display:flex;align-items:center}
+.hello{color:var(--accent);font-weight:700;margin-bottom:.2rem}
+.hero h1{font-size:clamp(2.8rem,7vw,4.8rem);font-weight:700;line-height:1.02}
+.lead-text{color:var(--muted);font-size:1.15rem;max-width:34rem;margin:1rem 0 1.6rem}
+.social a{display:inline-grid;place-items:center;width:44px;height:44px;margin-right:.4rem;border-radius:50%;background:transparent;border:1px solid var(--accent);color:var(--accent);font-size:1.1rem;transition:.25s}
+.social a:hover{background:var(--accent);color:var(--on);transform:translateY(-4px)}
+.hero-visual{position:relative;padding:0 0 2rem 3rem}
+.profile-img{width:190px;height:190px;object-fit:cover;border-radius:50%;border:3px solid var(--accent);position:absolute;top:-2.5rem;left:0;z-index:2;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.code-card{background:var(--surface);border:1px solid var(--accent);border-radius:2px;padding:1rem 1.4rem 1.4rem;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.code-bar span{display:inline-block;width:11px;height:11px;border-radius:50%;border:1px solid var(--accent);margin-right:6px}
+#code{color:var(--ink);font-size:.95rem;min-height:15rem;margin:2.2rem 0 0;white-space:pre-wrap}
+#code::after{content:'|';color:var(--accent2);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* ===== 6. SECTIONS ===== */
+.section{padding:5rem 0}
+.section.alt{background:var(--surface)}
+.title{font-weight:700;font-size:clamp(2.2rem,5vw,3rem);margin-bottom:2.2rem}
+.info-list{list-style:none;padding:0}
+.info-list li{padding:.7rem 0;border-bottom:1px solid var(--line)}
+.info-list i{color:var(--accent);margin-right:.6rem}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:1.2rem}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--accent)}
+.stat span{color:var(--muted)}
+
+/* ===== 7. SKILL BARS ===== */
+.bar{height:6px;border-radius:0;background:var(--line);margin-top:.4rem;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width 1.4s ease}
+
+/* ===== 8. CARDS (services and projects) ===== */
+.card-x{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:1.8rem;height:100%;color:var(--ink);text-decoration:none;transition:.3s}
+.section.alt .card-x{background:var(--bg)}
+.card-x:hover{border-color:var(--accent);transform:translateY(-6px)}
+.card-x i{font-size:2rem;color:var(--accent)}
+.card-x h3{font-size:1.55rem;font-weight:700;margin:.8rem 0 .4rem}
+.card-x p{color:var(--muted);margin:0}
+.filters .btn{border:1px solid var(--line);color:var(--ink);margin:0 .3rem .5rem 0;border-radius:2px}
+.filters .btn.active{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.proj.hidden{display:none}
+
+/* ===== 9. FOOTER AND BACK TO TOP ===== */
+.footer{padding:1.6rem 0;border-top:1px solid var(--line);color:var(--muted)}
+#toTop{position:fixed;right:1.2rem;bottom:1.2rem;width:44px;height:44px;border:0;border-radius:50%;background:var(--accent);color:var(--on);opacity:0;pointer-events:none;transition:.3s}
+#toTop.show{opacity:1;pointer-events:auto}
+
+/* ===== 10. MOBILE AND ACCESSIBILITY ===== */
+@media(max-width:991px){.hero{padding-top:7rem}.hero-visual{padding-left:0;padding-top:3rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+
+
+/* ===== 11. PRELOADER: number counts up, curtain slides away ===== */
+#preloader{transition:transform .9s cubic-bezier(.77,0,.18,1)}
+#preloader.hide{transform:translateY(-100%);opacity:1}
+.pre-in{text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--accent)}
+.pre-in b{display:block;font-size:3.6rem;color:var(--ink)}
+
+/* ===== 12. CUSTOM CURSOR (mouse devices only) ===== */
+@media(pointer:fine){
+  body,a,button,input,textarea{cursor:none}
+  #cur,#curRing{position:fixed;top:0;left:0;pointer-events:none;z-index:3000;border-radius:50%}
+  #cur{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--accent)}
+  #curRing{width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid var(--accent);transition:width .25s,height .25s,margin .25s,background .25s}
+  #curRing.big{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(62,224,255,.14)}
+}
+@media(pointer:coarse){#cur,#curRing{display:none}}
+
+/* ===== 13. HERO ANIMATION: letters rise one by one, then the rest fades in ===== */
+.hero{position:relative;overflow:hidden}
+.hero .container{position:relative;z-index:1}
+#bg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+#heroName .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .14em;margin-right:.22em}
+#heroName .ch{display:inline-block;opacity:0;transform:translateY(110%) rotate(8deg);transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .9s}
+#heroName.go .ch{opacity:1;transform:none}
+.fx{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.hero.go .fx{opacity:1;transform:none}
+.profile-img{transition:transform .3s ease-out}
+
+/* ===== 14. MARQUEE ===== */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--surface);padding:1.1rem 0}
+.track{display:flex;width:max-content;animation:slide 32s linear infinite}
+.track span{font-family:'Cormorant Garamond',serif;font-size:1.9rem;white-space:nowrap;padding-left:3.2rem}
+.track span::after{content:'\25C6';font-size:.7rem;color:var(--accent);margin-left:3.2rem;vertical-align:middle}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ===== 15. SCROLL REVEAL, TITLE LINE, PROCESS NUMBERS, MAGNETIC BUTTONS ===== */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.title::after{content:'';display:block;height:2px;width:0;margin-top:.7rem;background:var(--accent);transition:width 1s .3s}
+.title.in::after{width:80px}
+.num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;line-height:1;color:var(--accent)}
+.btn-brand,.btn-outline-brand,.social a{transition:transform .2s,background .3s,color .3s}
+.card-x{will-change:transform}
+
+
+/* ===== 16. DIGITAL LOOK: monospace labels, grid paper, scan line ===== */
+.nav-link,.hello,.stat span,.pct,.filters .btn,.footer,#code,.btn,.info-list,.form-label,.pre-in small,.code-bar em{font-family:'JetBrains Mono',monospace}
+.btn,.filters .btn{font-size:.85rem}
+.info-list,.stat span{font-size:.9rem}
+.stat b{font-family:'JetBrains Mono',monospace;font-size:2.4rem}
+body,.section.alt{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M48 0H0v48' fill='none' stroke='%233ee0ff' stroke-opacity='.07'/%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent);opacity:.2;animation:scan 7s linear infinite}
+@keyframes scan{to{top:100%}}
+.title::before{content:'// ';font-family:'JetBrains Mono',monospace;font-size:.5em;color:var(--accent);vertical-align:middle}
+.bar i{transition:width 1.6s steps(24)}
+
+/* ===== 17. HUD CORNER MARKS ON BOXES ===== */
+.card-x,.stat,.code-card{position:relative}
+.card-x::before,.stat::before,.code-card::before,.card-x::after,.stat::after,.code-card::after{content:'';position:absolute;width:12px;height:12px;border:0 solid var(--accent);transition:.3s}
+.card-x::before,.stat::before,.code-card::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.card-x::after,.stat::after,.code-card::after{right:-1px;bottom:-1px;border-width:0 2px 2px 0}
+.card-x:hover::before,.card-x:hover::after{width:28px;height:28px}
+
+/* ===== 18. CODE COLOURS, HUD STATUS BAR ===== */
+#code .k{color:var(--accent)}#code .s{color:#7dffb3}#code .kw{color:#ff7ab8}
+.code-bar em{font-size:.75rem;color:var(--muted);font-style:normal;margin-left:.6rem}
+#hud{position:fixed;left:1rem;bottom:1rem;z-index:1400;display:flex;gap:.9rem;align-items:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:.4rem .8rem}
+.pulse{width:8px;height:8px;border-radius:50%;background:#5dffa8;animation:pl 1.6s infinite}
+@keyframes pl{50%{opacity:.25}}
+@media(max-width:575px){#hud .hide-sm{display:none}}
+
+
+/* ===== 19. TYPOGRAPHY POLISH: eyebrow labels, role line, nav underline ===== */
+.eyebrow{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.role{font-size:1.1rem;color:var(--muted);margin:-.3rem 0 1.1rem}
+.role em{color:var(--ink);font-size:1.3rem}
+.hello{display:flex;align-items:center;gap:.6rem}
+.hline{width:34px;height:1px;background:var(--accent)}
+.nav-link{position:relative;padding-bottom:2px}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--accent);transition:width .3s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.title{font-size:clamp(2.4rem,5.4vw,3.6rem)}
+.card-x h3{font-family:'Instrument Serif',serif;font-weight:400}
+.stat b,.num{font-family:'Instrument Serif',serif;font-weight:400}
+::selection{background:var(--accent);color:var(--on)}
+
+/* ===== 20. REFINED SPACING AND SECTION DIVIDERS ===== */
+.section{padding:6.5rem 0}
+.section+.section{border-top:1px solid var(--line)}
+.info-list li{display:flex;align-items:center;gap:.5rem}
+.card-x{display:flex;flex-direction:column}
+.card-x i{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--accent);font-size:1.4rem;margin-bottom:.3rem}
+
+/* ===== 21. FOOTER ===== */
+.footer{font-family:'JetBrains Mono',monospace;font-size:.8rem;letter-spacing:.02em}
+
+
+/* ===== 22. FLOATING SHAPES: soft flat blobs drifting behind the hero ===== */
+.blob{position:absolute;border-radius:50%;background:var(--accent);opacity:.09;filter:blur(4px);pointer-events:none;z-index:0}
+.b1{width:340px;height:340px;top:-80px;right:6%;animation:drift1 16s ease-in-out infinite}
+.b2{width:220px;height:220px;bottom:-40px;left:2%;animation:drift2 20s ease-in-out infinite}
+.b3{width:140px;height:140px;top:40%;right:28%;animation:drift1 13s ease-in-out infinite reverse;opacity:.06}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(-24px,26px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-22px)}}
+@media(prefers-reduced-motion:reduce){.blob{animation:none}}
+
+/* ===== 23. PROFILE IMAGE REVEAL: a panel wipes away on scroll-in ===== */
+.img-wrap{display:block;position:absolute;top:-2.5rem;left:0;z-index:2;width:190px;height:190px;overflow:hidden;border-radius:50%}
+.img-wrap::after{content:'';position:absolute;inset:0;background:var(--accent);transform-origin:top;transform:scaleY(1);transition:transform .9s cubic-bezier(.77,0,.18,1) .5s;z-index:2}
+.hero.go .img-wrap::after{transform:scaleY(0)}
+.img-wrap .profile-img{position:static;border-radius:50%}
+
+/* ===== 24. GLOW ON HOVER: warm/cyan light instead of a flat border colour ===== */
+.card-x:hover{box-shadow:0 18px 40px var(--glow)}
+.btn-brand:hover{box-shadow:0 10px 26px var(--glow)}
+.social a:hover{box-shadow:0 8px 20px var(--glow)}
+#toTop:hover{box-shadow:0 10px 26px var(--glow)}
+
+/* ===== 25. STAGGERED CARD ENTRANCE (scale + rise together, not just fade) ===== */
+.card-x.rv{transform:translateY(36px) scale(.96)}
+.card-x.rv.in{transform:none}
+
+
+/* ===== 26. HIGH-DESIGN OVERHAUL: bigger type, glass cards, noise, bold accent ===== */
+body{font-size:1.06rem}
+.hero h1{font-size:clamp(3.2rem,9vw,6.4rem);letter-spacing:-.02em}
+.title{font-size:clamp(2.8rem,6.5vw,4.4rem)}
+.card-x h3{font-size:1.7rem}
+.eyebrow{font-weight:600;letter-spacing:.22em}
+
+/* glass surface for cards, stat boxes and the code window */
+.card-x,.stat,.code-card{background:var(--glass);backdrop-filter:blur(14px) saturate(140%);border:1px solid var(--line)}
+.section.alt{background:color-mix(in srgb, var(--surface) 60%, transparent)}
+.navbar{background:color-mix(in srgb, var(--surface) 82%, transparent);backdrop-filter:blur(10px)}
+
+/* subtle grain so flat colour never looks like plain css */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* accent gets punchier: filled icon boxes, bolder buttons */
+.card-x i{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.btn-brand{font-weight:700;letter-spacing:.02em}
+.filters .btn:hover{border-color:var(--accent);color:var(--accent)}
+.nav-link:hover{color:var(--ink)}
+
+/* section labels get a filled tag look */
+.eyebrow{border:1px solid var(--accent);padding:.2rem .6rem;border-radius:2px}
+
+/* bigger, bolder profile ring + code card shadow */
+.img-wrap{box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.code-card{box-shadow:0 24px 70px rgba(0,0,0,.22)}
+
+/* project / service cards: shimmer sweep on hover for a premium feel */
+.card-x{position:relative;overflow:hidden}
+.card-x .shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,var(--glow) 50%,transparent 60%);transform:translateX(-120%);transition:transform .8s}
+.card-x:hover .shine{transform:translateX(120%)}
+
+/* stronger section rhythm */
+.section{padding:8rem 0}
+@media(max-width:767px){.section{padding:5rem 0}.hero h1{font-size:clamp(2.6rem,11vw,3.6rem)}}
+
+
+/* ===== 27. DAY/NIGHT SWITCH: a colour-graded circular wipe instead of an instant flip ===== */
+#wipe{position:fixed;top:0;left:0;width:48px;height:48px;border-radius:50%;background:var(--accent);
+  transform:translate(-50%,-50%) scale(0);pointer-events:none;z-index:2500;mix-blend-mode:normal}
+#wipe.run{transition:transform .85s cubic-bezier(.76,0,.24,1),opacity .5s ease .5s;transform:translate(-50%,-50%) scale(60);opacity:0}
+#themeBtn{position:relative;overflow:visible}
+#themeBtn i{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+#themeBtn.spin i{transform:rotate(220deg) scale(.7)}
+
+/* ===== 28. DAY MODE: crisp digital tint (cool grid glow + tinted glass) ===== */
+:root{--tint:rgba(54,84,255,.05)}
+[data-bs-theme=dark]{--tint:rgba(212,255,63,.04)}
+.hero,.section.alt{background-image:linear-gradient(var(--tint),var(--tint))}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mahmudul Haq Rupom | Web Designer</title>
+  <meta name="description" content="Portfolio of Mahmudul Haq Rupom, NSDA certified Web Design (Level-3)">
+  <!-- Google Fonts, Bootstrap 5 and Bootstrap Icons (CDN: internet needed) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Our own stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#nav" data-bs-offset="90" tabindex="0">
+
+  <!-- ===== PRELOADER: hidden by main.js when page loads ===== -->
+  <div id="preloader">
+    <div class="pre-in"><b>Rupom<span class="dot">.</span></b><span id="preNum">0</span>%<small id="preMsg"
+        class="d-block">booting...</small></div>
+  </div>
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="progress"></div>
+  <div id="wipe"></div>
+  <!-- ===== CUSTOM CURSOR (desktop only, moved by main.js) ===== -->
+  <div id="cur"></div>
+  <div id="curRing"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="nav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Rupom<span class="dot">.</span></a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Open menu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- Dark / light theme button -->
+          <li class="nav-item ms-lg-2"><button id="themeBtn" class="btn btn-sm btn-outline-secondary"
+              aria-label="Change theme"><i class="bi bi-moon-stars"></i></button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <header id="home" class="hero">
+    <!-- Animated gold network drawn by main.js -->
+    <canvas id="bg"></canvas>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="hello"><span class="hline"></span>&gt; hello, I am</p>
+          <h1 id="heroName" aria-label="Mahmudul Haq Rupom">Mahmudul Haq Rupom</h1>
+          <p class="role"><em>Web Designer</em> &mdash; NSDA Level-3 Certified</p>
+          <p class="lead-text">NSDA certified web designer (Level-3). I build fast, responsive websites with HTML, CSS,
+            JavaScript and Bootstrap.</p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="#contact" class="btn btn-brand">Hire me</a>
+            <a href="#projects" class="btn btn-outline-brand">See my work</a>
+          </div>
+          <!-- Social links: replace the # / profile links with your real ones -->
+          <div class="social">
+            <a href="https://facebook.com/your.profile" target="_blank" rel="noopener" aria-label="Facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/8801998572019" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                class="bi bi-whatsapp"></i></a>
+            <a href="mailto:mahmudulweb@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <!-- Profile photo (images/profile.svg) + code window typed by JavaScript -->
+        <div class="col-lg-6">
+          <div class="hero-visual">
+            <span class="img-wrap"><img src="images/WhatsApp Image 2026-09-21 at 9.35.43 PM.jpeg"
+                alt="Mahmudul Haq Rupom" class="profile-img"></span>
+            <div class="code-card">
+              <div class="code-bar"><span></span><span></span><span></span><em>rupom.js</em></div>
+              <pre id="code" aria-label="Profile summary"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MARQUEE: endless skill strip (main.js duplicates it for a seamless loop) ===== -->
+  <div class="marquee">
+    <div class="track">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>Responsive
+        design</span><span>Git and GitHub</span><span>Clean code</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <span class="eyebrow">01 &mdash; Profile</span>
+      <h2 class="title">About me</h2>
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <p>I am a web designer who enjoys turning a plain idea into a clean, working website. I completed Web Design
+            Level-3 from NSDA (National Skills Development Authority) and I keep practising with real layouts every day.
+          </p>
+          <p>I write my code in a tidy way, with comments, so it is easy to read and change later.</p>
+          <a href="#" class="btn btn-brand mt-2"><i class="bi bi-download me-1"></i> Download CV</a>
+        </div>
+        <div class="col-lg-5">
+          <ul class="info-list">
+            <li><i class="bi bi-person"></i> Mahmudul Haq Rupom</li>
+            <li><i class="bi bi-patch-check"></i> NSDA Web Design, Level-3</li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+8801998572019">01998-572019</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:mahmudulweb@gmail.com">mahmudulweb@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Animated counters (change data-target numbers as you like) -->
+      <div class="row text-center g-3 mt-4">
+        <div class="col-6 col-md-3">
+          <div class="stat"><b class="count" data-target="3">0</b><span>NSDA level</span></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat"><b class="count" data-target="4">0</b><span>Core technologies</span></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat"><b class="count" data-target="6">0</b><span>Sample projects</span></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat"><b class="count" data-target="100">0</b><span>Percent dedication</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION (bars fill when scrolled into view) ===== -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <span class="eyebrow">02 &mdash; Toolkit</span>
+      <h2 class="title">Skills</h2>
+      <div class="row g-4">
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>HTML5</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="90"></i></div>
+        </div>
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>CSS3</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="85"></i></div>
+        </div>
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>JavaScript</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="70"></i></div>
+        </div>
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>Bootstrap</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="85"></i></div>
+        </div>
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>Responsive design</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="88"></i></div>
+        </div>
+        <div class="col-md-6 skill">
+          <div class="d-flex justify-content-between"><span>Git and GitHub</span><span class="pct">0%</span></div>
+          <div class="bar"><i data-level="60"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="section">
+    <div class="container">
+      <span class="eyebrow">03 &mdash; Services</span>
+      <h2 class="title">What I can build for you</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-x"><span class="shine"></span><i class="bi bi-phone"></i>
+            <h3>Responsive websites</h3>
+            <p>Pages that look right on phone, tablet and desktop.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-x"><span class="shine"></span><i class="bi bi-window-stack"></i>
+            <h3>Landing pages</h3>
+            <p>One clear page for your shop, event or service.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-x"><span class="shine"></span><i class="bi bi-lightning-charge"></i>
+            <h3>Interactive features</h3>
+            <p>Sliders, forms, filters and menus using JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS SECTION: how a project goes from idea to launch ===== -->
+  <section id="process" class="section alt">
+    <div class="container">
+      <span class="eyebrow">04 &mdash; Process</span>
+      <h2 class="title">How I work</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-x"><span class="num">01</span>
+            <h3>Talk</h3>
+            <p>You tell me what the website is for and who will use it.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-x"><span class="num">02</span>
+            <h3>Design</h3>
+            <p>I plan the layout, colours and fonts before writing code.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-x"><span class="num">03</span>
+            <h3>Build</h3>
+            <p>I code it with HTML, CSS, JavaScript and Bootstrap.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-x"><span class="num">04</span>
+            <h3>Launch</h3>
+            <p>I test on phone and desktop, then hand it over.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION (filter buttons work with data-category) ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <span class="eyebrow">05 &mdash; Selected work</span>
+      <h2 class="title">Projects</h2>
+      <div class="filters mb-4">
+        <button class="btn btn-sm active" data-filter="all">All</button>
+        <button class="btn btn-sm" data-filter="html">HTML and CSS</button>
+        <button class="btn btn-sm" data-filter="js">JavaScript</button>
+        <button class="btn btn-sm" data-filter="bs">Bootstrap</button>
+      </div>
+      <div class="row g-4" id="projectGrid">
+        <!-- Replace titles, icons and links with your real projects -->
+        <div class="col-md-6 col-lg-4 proj" data-category="bs"><a href="#" class="card-x d-block"><i
+              class="bi bi-cup-hot"></i>
+            <h3>Restaurant landing page</h3>
+            <p>Bootstrap grid, menu cards, booking form.</p>
+          </a></div>
+        <div class="col-md-6 col-lg-4 proj" data-category="html"><a href="#" class="card-x d-block"><i
+              class="bi bi-journal-text"></i>
+            <h3>Personal blog layout</h3>
+            <p>Clean typography with pure HTML and CSS.</p>
+          </a></div>
+        <div class="col-md-6 col-lg-4 proj" data-category="js"><a href="#" class="card-x d-block"><i
+              class="bi bi-check2-square"></i>
+            <h3>To-do app</h3>
+            <p>Add, finish and delete tasks with JavaScript.</p>
+          </a></div>
+        <div class="col-md-6 col-lg-4 proj" data-category="js"><a href="#" class="card-x d-block"><i
+              class="bi bi-cloud-sun"></i>
+            <h3>Weather widget</h3>
+            <p>Search a city and show the forecast.</p>
+          </a></div>
+        <div class="col-md-6 col-lg-4 proj" data-category="bs"><a href="#" class="card-x d-block"><i
+              class="bi bi-building"></i>
+            <h3>Business website</h3>
+            <p>Multi-section company site with a contact form.</p>
+          </a></div>
+        <div class="col-md-6 col-lg-4 proj" data-category="html"><a href="#" class="card-x d-block"><i
+              class="bi bi-images"></i>
+            <h3>Photo gallery</h3>
+            <p>CSS grid gallery that adapts to any screen.</p>
+          </a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <span class="eyebrow">06 &mdash; Say hello</span>
+      <h2 class="title">Contact</h2>
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <p>Have a website idea? Send a message or call me.</p>
+          <ul class="info-list">
+            <li><i class="bi bi-telephone"></i> <a href="tel:+8801998572019">01998-572019</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:mahmudulweb@gmail.com">mahmudulweb@gmail.com</a></li>
+            <li><i class="bi bi-facebook"></i> <a href="https://facebook.com/your.profile" target="_blank"
+                rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <!-- Form is checked by Bootstrap validation + main.js, then opens the email app -->
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3"><label class="form-label" for="fName">Your name</label><input id="fName"
+                class="form-control" required minlength="3">
+              <div class="invalid-feedback">Enter at least 3 letters.</div>
+            </div>
+            <div class="mb-3"><label class="form-label" for="fEmail">Your email</label><input id="fEmail" type="email"
+                class="form-control" required>
+              <div class="invalid-feedback">Enter a valid email address.</div>
+            </div>
+            <div class="mb-3"><label class="form-label" for="fMsg">Message</label><textarea id="fMsg" rows="4"
+                class="form-control" required minlength="10"></textarea>
+              <div class="invalid-feedback">Write at least 10 characters.</div>
+            </div>
+            <button class="btn btn-brand" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer text-center">
+    <p class="mb-0">&copy; <span id="year"></span> Mahmudul Haq Rupom. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== HUD STATUS BAR: live clock and scroll depth (updated by main.js) ===== -->
+  <div id="hud"><span class="pulse"></span><span>online</span><span id="clock">--:--:--</span><span
+      class="hide-sm">scroll <b id="depth">0</b>%</span></div>
+
+  <!-- Back to top button -->
+  <button id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap JS bundle, then our script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
