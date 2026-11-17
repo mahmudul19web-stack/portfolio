@@ -217,11 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const codeText = `const rupom = {
   name: "Mahmudul Haq Rupom",
-  certified: "NSDA Web Design Lv-3",
-  skills: ["HTML", "CSS",
-           "JavaScript", "Bootstrap"],
+  title: "MERN Stack Developer & AI Automation Engineer",
+  
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "React.js",
+    "Node.js",
+    "AI Automation"
+  ],
   available: true,
-  phone: "01998-572019"
+  email: "mahmudul19web@gmail.com"
 };`;
 
   const codeElement = document.getElementById('code');
