@@ -1219,3 +1219,126 @@ body::before {
 .section.alt {
   background-image: linear-gradient(var(--tint), var(--tint))
 }
+
+
+
+
+
+
+/* ==========================================
+   PROJECT CARDS - IMAGE AND TWO BUTTONS
+   ========================================== */
+
+/* Project card layout */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Project image container */
+.project-image-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Project image */
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Project text content */
+.project-content {
+  flex: 1;
+  padding: 1.5rem 1.5rem 1.2rem;
+}
+
+.project-content h3 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0 0 .6rem;
+  color: var(--ink);
+}
+
+.project-content p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Two equal-width project buttons */
+.project-actions {
+  display: flex;
+  width: 100%;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  width: 50%;
+  min-height: 52px;
+  padding: .8rem .5rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  transition: background-color .25s, color .25s;
+}
+
+.project-btn + .project-btn {
+  border-left: 1px solid var(--line);
+}
+
+.project-btn i {
+  width: auto;
+  height: auto;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.project-btn:hover {
+  background: var(--accent);
+  color: var(--on);
+}
+
+/* Project card hover keeps the existing theme */
+.project-card:hover {
+  border-color: var(--accent);
+}
+
+/* Project image and buttons on smaller screens */
+@media (max-width: 575px) {
+  .project-image-box {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1.2rem;
+  }
+
+  .project-btn {
+    min-height: 48px;
+    font-size: .72rem;
+  }
+}
